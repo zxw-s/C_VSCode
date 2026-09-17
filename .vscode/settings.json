@@ -1,0 +1,33 @@
+{
+    // 文件编码统一 UTF‑8，防止中文乱码
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false,
+    // 保存自动格式化
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    // C/C++ 格式化工具 clang‑format 风格
+    "C_Cpp.clang_format_style": "GNU",
+    // 关闭自动补全括号提示干扰
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // 编辑器缩进：C语言标准 4空格
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    // 终端配置 Windows 使用 cmd
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    // 排除不需要的文件夹，减少索引
+    "files.exclude": {
+        "**/*.exe": true,
+        "**/*.o": true,
+        "**/*.s": true,
+        "**/*.i": true
+    },
+    // Code‑Runner 插件配置（可选，快速运行单文件）
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "c": "gcc $fileName -o $fileNameWithoutExt.exe -g -Wall -std=c17 && $fileNameWithoutExt.exe"
+    },
+    // 关闭不必要的文件提示
+    "security.workspace.trust.untrustedFiles": "open"
+}
